@@ -1,0 +1,16 @@
+<div class="row">
+  <h2>{{ title }}</h2>
+  <div class="row-posters">
+    <img
+      *ngFor="let movie of movies"
+      class="row-poster"
+      [ngClass]="{ 'row-posterLarge': showPoster }"
+      src="{{
+        showPoster
+          ? appConstants['imageBaseUrl'] + movie['poster_path']
+          : appConstants['imageBaseUrl'] + movie['backdrop_path']
+      }}"
+      alt="{{ movie.name }}"
+    />
+  </div>
+</div>

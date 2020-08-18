@@ -1,0 +1,37 @@
+<div>
+  <app-nav></app-nav>
+  <app-banner></app-banner>
+  <app-movie-row
+    [title]="'Netflix Originals'"
+    [fetchUrl]="requests['fetchNetflixOriginals']"
+    [showPoster]="'true'"
+  ></app-movie-row>
+  <app-movie-row
+    [title]="'Trending'"
+    [fetchUrl]="requests['fetchTrending']"
+  ></app-movie-row>
+  <app-movie-row
+    [title]="'Top Rated'"
+    [fetchUrl]="requests['fetchTopRated']"
+  ></app-movie-row>
+  <app-movie-row
+    [title]="'Action'"
+    [fetchUrl]="requests['fetchActionMovies']"
+  ></app-movie-row>
+  <app-movie-row
+    [title]="'Comedy'"
+    [fetchUrl]="requests['fetchComedyMovies']"
+  ></app-movie-row>
+  <app-movie-row
+    [title]="'Horror'"
+    [fetchUrl]="requests['fetchHorrorMovies']"
+  ></app-movie-row>
+  <app-movie-row
+    [title]="'Romance'"
+    [fetchUrl]="requests['fetchHorrorMovies']"
+  ></app-movie-row>
+  <app-movie-row
+    [title]="'Documentaries'"
+    [fetchUrl]="requests['fetchHorrorMovies']"
+  ></app-movie-row>
+</div>

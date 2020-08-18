@@ -1,0 +1,26 @@
+<header
+  class="banner"
+  [ngStyle]="{
+    'background-size': 'cover',
+    'background-image':
+      'url(' + appConstants['imageBaseUrl'] + movie['backdrop_path'] + ')'
+  }"
+>
+  <div class="banner-contents">
+    <h1 class="banner-title">
+      {{ movie["title"] || movie["name"] || movie["original_name"] }}
+    </h1>
+    <div class="banner-buttons">
+      <button class="banner-button">
+        Play
+      </button>
+      <button class="banner-button">
+        My List
+      </button>
+    </div>
+    <h1 class="banner-description">
+      {{ truncateString(movie["overview"], 150) || "" }}
+    </h1>
+  </div>
+  <div class="banner-fadeBottom"></div>
+</header>
